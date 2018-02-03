@@ -22,3 +22,13 @@ function selectTab(target) {
   })
   document.querySelector(`.content-${tabNum}`).classList.add('content-active')
 }
+
+const toggleNav = () => {
+  if (document.querySelector('.hb-menu').className.includes('hb-menu-hidden')) {
+    document.querySelector('.hb-menu').classList.remove('hb-menu-hidden');
+  } else {
+    document.querySelector('.hb-menu').classList.add('hb-menu-hidden');
+  }
+}
+
+document.querySelector('.hb-menu-text').addEventListener('click', toggleNav)

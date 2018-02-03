@@ -33,6 +33,8 @@ p {
   font-weight: 300;
 }
 
+/****  ACCORDION TABS  ****/
+
 .header-hr {
   display: none;
 }
@@ -68,13 +70,13 @@ header h2 {
   margin: 0;
 }
 
-.accordion {
+#accordion {
   width: 768px;
   margin: 20px auto;
   position: relative;
 }
 
-.titles-bar {
+.acc-titles-bar {
   height: 61px;
   width: 100%;
 }
@@ -92,10 +94,6 @@ header h2 {
   padding: 15px;
   align-items: center;
 }
-
-/*.title-container {
-  display: flex;
-}*/
 
 .acc-title {
   width: 192px;
@@ -175,7 +173,6 @@ header h2 {
 
   .pattern-type-hr {
     width: 30%;
-    /*margin-bottom: 60px;*/
   }
 
   .pattern-type {
@@ -199,7 +196,7 @@ header h2 {
     display: block;
   }
 
-  .titles-bar {
+  .acc-titles-bar {
     display: none;
   }
 
@@ -208,7 +205,7 @@ header h2 {
     padding: 15px;
   }
 
-  .accordion {
+  #accordion {
     width: 100%;
     border: 1px solid #ddd;
   }
@@ -235,11 +232,109 @@ header h2 {
   }
 }
 
-@media screen and (max-width: 550px) {
-  .acc-text {
-    /*width: 100%;*/
+/****  HEADER BAR  ****/
+
+#header-bar {
+  position: relative;
+}
+
+.hb-nav {
+  background-color: #ddd;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px
+}
+
+.hb-circle-logo {
+  width: 75px;
+  height: 75px;
+  border-radius: 100px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+}
+
+.hb-menu-text {
+  display: none;
+}
+
+.hb-menu {
+  display: flex;
+  position: absolute;
+  right: 16px;
+  top: 27px;
+  align-items: center;
+}
+
+.hb-ul {
+  display: flex;
+  list-style-type: none
+}
+
+.hb-ul li {
+  margin-right: 24px;
+  cursor: pointer;
+}
+
+.hb-search {
+  width: 200px;
+  height: 40px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+}
+
+::placeholder {
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .hb-menu-hidden {
+    display: none;
+  }
+
+  .hb-menu-text {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hb-menu {
+    position: static;
+    flex-direction: column;
+    width: 100%;
+    padding: 16px;
+    background-color: #eee;
+  }
+
+  .hb-ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .hb-ul li {
+    width: 100%;
+    margin: 0px 0px 21px -16px;
+  }
+
+  .hb-search {
+    width: 100%;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -6,7 +6,8 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 600
+  font-weight: 600;
+  color: #444;
 }
 
 h1 {
@@ -31,6 +32,7 @@ h4 {
 
 p {
   font-weight: 300;
+  color: #444;
 }
 
 /****  ACCORDION TABS  ****/
@@ -40,7 +42,7 @@ p {
 }
 
 .acc-hr {
-  border: 1px solid #ddd;
+  border: 1px solid #d1d2d3;
   margin: -12px 0 5px;
 }
 
@@ -49,7 +51,7 @@ header {
   justify-content: space-between;
   padding: 5px 40px;
   background-color: #3F3244;
-  margin-bottom: 39px;
+  margin-bottom: 35px;
 }
 
 header h2 {
@@ -58,7 +60,7 @@ header h2 {
 
 .pattern-type {
   width: 868px;
-  margin: 30px auto 20px;
+  margin: 30px auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -66,11 +68,11 @@ header h2 {
 
 .pattern-type-hr {
   width: 600px;
-  border: 1px solid #ddd;
+  border: 1px solid #d1d2d3;
   margin: 0;
 }
 
-#accordion {
+#accordion-tabs {
   width: 768px;
   margin: 20px auto;
   position: relative;
@@ -79,6 +81,7 @@ header h2 {
 .acc-titles-bar {
   height: 61px;
   width: 100%;
+  margin-top: -16px;
 }
 
 .tab-active {
@@ -87,23 +90,23 @@ header h2 {
 
 .acc-content {
   width: 768px;
-  border: 1px solid #ddd;
+  border: 1px solid #d1d2d3;
   border-top: none;
   background-color: #fff;
   display: none;
-  padding: 15px;
+  padding: 11px 15px 5px;
   align-items: center;
 }
 
 .acc-title {
   width: 192px;
-  background-color: #eee;
+  background-color: #f2f2f2;
   padding: 10px 0;
   margin-bottom: 0;
   cursor: pointer;
   position: absolute;
   border: 1px solid #fff;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #d1d2d3;
 }
 
 .title-1 {
@@ -128,7 +131,7 @@ header h2 {
 
 .title-active {
   background-color: #fff;
-  border: 1px solid #ddd;
+  border: 1px solid #d1d2d3;
   border-bottom: none;
 }
 
@@ -146,8 +149,8 @@ header h2 {
   width: 28%;
   height: 250px;
   margin-right: 20px;
-  background-color: #eee;
-  border: 1px solid #ddd;
+  background-color: #f2f2f2;
+  border: 1px solid #d1d2d3;
 }
 
 .acc-text {
@@ -205,9 +208,10 @@ header h2 {
     padding: 15px;
   }
 
-  #accordion {
+  #accordion-tabs {
     width: 100%;
-    border: 1px solid #ddd;
+    border: 1px solid #d1d2d3;
+    margin-bottom: 56px;
   }
 
   .acc-title {
@@ -232,6 +236,81 @@ header h2 {
   }
 }
 
+/****  FLEXIBLE CARDS  ****/
+
+#flexible-cards {
+  width: 768px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+  grid-auto-rows: minmax(249px, auto);
+}
+
+.fc-cards {
+  background-color: #f2f2f2;
+  border: 1px solid #d1d2d3;
+}
+
+.fc-cards-title {
+  background-color: #fff;
+  padding: 15px;
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.fc-1 {
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+
+.fc-2 {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.fc-3 {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.fc-4 {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.fc-5 {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.fc-6 {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.fc-7 {
+  grid-column: 2 / 4;
+  grid-row: 3;
+}
+
+@media screen and (max-width: 767px) {
+  #flexible-cards {
+    width: 100%;
+    padding: 0 15px 15px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .fc-cards {
+    width: 100%;
+    height: 248px;
+    margin-bottom: 15px;
+  }
+}
+
 /****  HEADER BAR  ****/
 
 #header-bar {
@@ -239,7 +318,7 @@ header h2 {
 }
 
 .hb-nav {
-  background-color: #ddd;
+  background-color: #d1d2d3;
   display: flex;
   justify-content: space-between;
   padding: 16px
@@ -249,8 +328,8 @@ header h2 {
   width: 75px;
   height: 75px;
   border-radius: 100px;
-  background-color: #eee;
-  border: 1px solid #ccc;
+  background-color: #f2f2f2;
+  border: 1px solid #c1c2c3;
 }
 
 .hb-menu-text {
@@ -278,8 +357,12 @@ header h2 {
 .hb-search {
   width: 200px;
   height: 40px;
-  background-color: #eee;
-  border: 1px solid #ccc;
+  background-color: #f2f2f2;
+  background-image: url('../assets/mag-glass.svg');
+  background-repeat: no-repeat;
+  background-size: 20px;
+  border: 1px solid #b1b2b3;
+  background-position: 5% center;
 }
 
 ::placeholder {
@@ -301,7 +384,7 @@ header h2 {
     flex-direction: column;
     width: 100%;
     padding: 16px;
-    background-color: #eee;
+    background-color: #e1e2e3;
   }
 
   .hb-ul {
@@ -316,6 +399,7 @@ header h2 {
 
   .hb-search {
     width: 100%;
+    background-position: 3% center;
   }
 }
 

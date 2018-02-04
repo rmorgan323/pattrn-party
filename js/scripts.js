@@ -1,9 +1,3 @@
-document.addEventListener('click', function(event) {
-  if (event.target.className.includes('acc-title')) {
-    selectTab(event.target);
-  }
-})
-
 function selectTab(target) {
   const tabNum = target.classList[1].slice(6,7);
 
@@ -24,11 +18,29 @@ function selectTab(target) {
 }
 
 const toggleNav = () => {
-  if (document.querySelector('.hb-menu').className.includes('hb-menu-hidden')) {
-    document.querySelector('.hb-menu').classList.remove('hb-menu-hidden');
+  const menu = document.querySelector('.hb-menu');
+  if (menu.className.includes('hb-menu-hidden')) {
+    menu.classList.remove('hb-menu-hidden');
   } else {
-    document.querySelector('.hb-menu').classList.add('hb-menu-hidden');
+    menu.classList.add('hb-menu-hidden');
   }
 }
 
+const showCode = (target) => {
+  const buttonNum = target.classList[1].slice(7,8);
+  const codeArray = [
+    'https://github.com/rmorgan323/pattrn-party',
+    'https://github.com/rmorgan323/pattrn-party',
+    'https://github.com/rmorgan323/pattrn-party'
+  ];
+  window.open(codeArray[buttonNum])
+}
+
 document.querySelector('.hb-menu-text').addEventListener('click', toggleNav)
+document.addEventListener('click', function(event) {
+  if (event.target.className.includes('acc-title')) {
+    selectTab(event.target);
+  } else if (event.target.className.includes('see-code-button')) {
+    showCode(event.target)
+  }
+})

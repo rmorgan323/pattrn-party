@@ -9,4 +9,4 @@ They are built to an exact spec and would be easy to repurpose for any project. 
 
 Check out the live version: https://github.com/rmorgan323/pattrn-party
 
-![screenshot]('assets/pattrn-party-ss.png')
+![screenshot](assets/pattrn-party-ss.png)

@@ -29,9 +29,9 @@ const toggleNav = () => {
 const showCode = (target) => {
   const buttonNum = target.classList[1].slice(7,8);
   const codeArray = [
-    'https://github.com/rmorgan323/pattrn-party',
-    'https://github.com/rmorgan323/pattrn-party',
-    'https://github.com/rmorgan323/pattrn-party'
+    'https://github.com/rmorgan323/pattrn-party/blob/fc5c27e955a7d71c07853f0da640a72a2e619331/js/scripts.js#L1',
+    'https://github.com/rmorgan323/pattrn-party/blob/fc5c27e955a7d71c07853f0da640a72a2e619331/styles/styles.css#L257',
+    'https://github.com/rmorgan323/pattrn-party/blob/fc5c27e955a7d71c07853f0da640a72a2e619331/styles/styles.css#L337'
   ];
   window.open(codeArray[buttonNum])
 }
